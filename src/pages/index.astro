@@ -1,18 +1,30 @@
 ---
+// src/pages/index.astro
 import Button from '../components/Button';
+import Layout from '../layouts/Layout.astro';
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Occasium</title>
-</head>
-<body>
-  <h1 class="text-4xl font-bold text-center mt-8">Welcome to Occasium</h1>
-  <div class="flex justify-center mt-4">
-    <Button label="Click Me" onClick={() => alert('Button clicked!')} />
-  </div>
-</body>
-</html>
+<Layout title="Occasium - Discover Cultural Events">
+  <section class="hero bg-cover bg-center h-screen relative" style="background-image: url('https://picsum.photos/1920/1080');">
+    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+      <div class="text-center text-white p-8 bg-black bg-opacity-50 rounded-lg">
+        <h1 class="text-4xl font-bold mb-4">Discover Cultural Events</h1>
+        <p class="text-lg mb-6">Find the best exhibitions and museum events in your city.</p>
+        <form class="flex justify-center">
+          <input
+            type="text"
+            placeholder="Search for events..."
+            class="p-2 rounded-l-lg w-1/2 md:w-1/3 text-gray-800"
+          />
+          <button
+            type="submit"
+            class="p-2 bg-purple-500 bg-opacity-50 text-white rounded-r-lg hover:bg-purple-500 transition-all"
+          >
+            Search
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</Layout>
