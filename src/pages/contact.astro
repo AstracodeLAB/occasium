@@ -1,0 +1,50 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact Us - Occasium">
+  <section class="container mx-auto py-8">
+    <h1 class="text-4xl font-bold mb-4">Contact Us</h1>
+    <p class="text-lg mb-6">
+      We would love to hear from you! If you have any questions or need assistance, please feel free to reach out.
+    </p>
+    <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-4">
+      <div>
+        <label for="name" class="block text-lg font-medium mb-2">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          class="p-2 border border-gray-300 rounded w-full"
+        />
+      </div>
+      <div>
+        <label for="email" class="block text-lg font-medium mb-2">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          class="p-2 border border-gray-300 rounded w-full"
+        />
+      </div>
+      <div>
+        <label for="message" class="block text-lg font-medium mb-2">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          required
+          rows="4"
+          class="p-2 border border-gray-300 rounded w-full"
+        ></textarea>
+      </div>
+      <button
+        type="submit"
+        class="p-2 bg-button-bg text-white rounded hover:bg-button-hover-bg"
+      >
+        Send Message
+      </button>
+    </form>
+  </section>
+</Layout>
